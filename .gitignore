@@ -3,6 +3,7 @@
 .equinox/token
 
 coverage.txt
+test-results
 
 debug.test
 
