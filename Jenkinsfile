@@ -21,7 +21,7 @@ pipeline {
     stage('Build') {
       steps {
         buildStep('Build') {
-          //
+          sh 'go build -o bin/lpn'
         }
       }
     }
