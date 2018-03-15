@@ -42,7 +42,7 @@ pipeline {
     stage('Functional Tests') {
       steps {
         buildStep('Functional Tests') {
-          cucumber --format junit --out test-results/
+          sh 'cucumber --format junit --out test-results/'
         }
       }
     }
