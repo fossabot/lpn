@@ -86,7 +86,7 @@ JSONArray buildAttachments(String pretext, String text, String fallback, String 
   attachment.put('author_name', getGitAuthor());
   attachment.put('title', title);
   attachment.put('title_link', env.BUILD_URL);
-  attachment.put('footer', 'WeDeploy CI Team');
+  attachment.put('footer', 'GDG Toledo');
   attachment.put('footer_icon', 'https://a.slack-edge.com/7bf4/img/services/jenkins-ci_48.png')
 
   JSONArray attachmentFields = new JSONArray();
