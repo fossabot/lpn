@@ -4,6 +4,11 @@ import net.sf.json.JSONObject;
 String cronString = BRANCH_NAME == "master" ? "59 23 * * 1-5" : "";
 
 pipeline {
+  agent {
+    node {
+      label 'master'
+    }
+  }
   triggers { cron(cronString) }
   stages {
     stage('Install Dependencies') {
