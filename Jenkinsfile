@@ -1,7 +1,10 @@
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
+String cronString = BRANCH_NAME == "master" ? "59 23 * * 1-5" : "";
+
 pipeline {
+  triggers { cron(cronString) }
   stages {
     stage('Install Dependencies') {
       steps {
