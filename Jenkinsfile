@@ -39,6 +39,13 @@ pipeline {
         }
       }
     }
+    stage('Functional Tests') {
+      steps {
+        buildStep('Functional Tests') {
+          cucumber --format junit --out test-results/
+        }
+      }
+    }
     stage('Push image to dockerhub') {
       when {
         branch 'master'
